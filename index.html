@@ -6,6 +6,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/inputs.css" />
   </head>
   <body>
     <main>
@@ -14,8 +15,36 @@
           <canvas id="placeholder-canvas" class="placeholder-canvas"></canvas>
         </div>
 
-        <div>
-          <h2>CONFIGS</h2>
+        <div class="config-panel" onchange="generatePlaceholder()">
+          <h2>options</h2>
+          <div class="dimension-input-container">
+            <div class="collapsed-input">
+              <label for="input-width">width</label>
+              <input id="input-width" placeholder="1280" type="number" />
+            </div>
+            <span>X</span>
+            <div class="collapsed-input">
+              <label for="input-height">height</label>
+              <input id="input-height" placeholder="720" type="number" />
+            </div>
+          </div>
+          <div class="collapsed-input">
+            <label for="input-height">text</label>
+            <input id="input-text" placeholder="Meu Placeholder" type="text" />
+          </div>
+          <div class="collapsed-input">
+            <label for="input-height">font size</label>
+            <input id="input-font-size" placeholder="20" type="number" />
+          </div>
+          <div class="collapsed-input">
+            <label for="input-height">background</label>
+            <input id="input-background-color" type="color" value="#ffffff" />
+          </div>
+          <div class="collapsed-input">
+            <label for="input-height">foreground</label>
+            <input id="input-foreground-color" type="color" value="#1e293b" />
+          </div>
+          <button class="button">save placeholder</button>
         </div>
       </section>
     </main>

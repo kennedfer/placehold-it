@@ -1,0 +1,58 @@
+.dimension-input-container {
+  display: flex;
+  gap: 10px;
+
+  place-items: center;
+}
+
+.collapsed-input {
+  display: inline-flex;
+  overflow: hidden;
+  gap: 10px;
+
+  padding: 3px;
+  border: 1px solid rgb(226, 232, 240);
+  border-radius: 5px;
+
+  transition: 1s;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.collapsed-input > label {
+  padding: 7px 10px;
+
+  width: auto;
+
+  text-transform: uppercase;
+  font-weight: bolder;
+
+  background-color: var(--primary-color);
+  color: white;
+
+  border-radius: 5px;
+}
+
+.collapsed-input > input {
+  padding: 1px;
+  border: none;
+  flex-grow: 1;
+}
+
+.collapsed-input > input:focus {
+  outline: none;
+}
+
+.collapsed-input:has(:focus) {
+  border: 1px solid var(--primary-color);
+}
+
+.button {
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: white;
+
+  border: none;
+
+  font-weight: bolder;
+  text-transform: uppercase;
+}
