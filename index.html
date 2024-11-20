@@ -3,7 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Placehold It</title>
+    <meta
+      name="description"
+      content="Create a placeholder, customize dimensions, colors and text - simple and fast."
+    />
+
+    <meta
+      property="og:description"
+      content="Create a placeholder, customize dimensions, colors and text - simple and fast."
+    />
+    <meta
+      property="og:url"
+      content="https://kennedfer.github.io/placehold-it"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://kennedfer.github.io/placehold-it/assets/images/open-graph/op-preview.webp"
+    />
+    <meta property="og:image:alt" content="Home page of Placehold It" />
+    <meta property="og:locale" content="en_US" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
 
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/inputs.css" />
@@ -21,13 +59,7 @@
       <section class="hero-section">
         <h1>Placehold It</h1>
         <h3>Customize dimensions, colors and text - simple and fast.</h3>
-        <button
-          onclick="scrollToCanvasSection()"
-          id="cat-button"
-          class="cat-button"
-        >
-          Generate Placeholder
-        </button>
+        <button id="cat-button" class="cat-button">Generate Placeholder</button>
 
         <div class="bg-square-1"></div>
         <div class="bg-square-2"></div>
@@ -39,7 +71,7 @@
           <canvas id="placeholder-canvas" class="placeholder-canvas"></canvas>
         </div>
 
-        <div class="config-panel" oninput="generatePlaceholder()">
+        <div class="config-panel">
           <h2>options</h2>
           <div class="dimension-input-container">
             <div class="collapsed-input">
