@@ -3,6 +3,7 @@
   gap: 10px;
 
   place-items: center;
+  font-family: var(--font-family);
 }
 
 .collapsed-input {
@@ -22,12 +23,16 @@
   padding: 7px 10px;
 
   width: auto;
+  font-size: 1vw;
 
   text-transform: uppercase;
   font-weight: bolder;
 
   background-color: var(--primary-color);
   color: white;
+
+  user-select: none;
+  pointer-events: none;
 
   border-radius: 5px;
 }
@@ -37,6 +42,10 @@
   padding: 1px;
   border: none;
   flex-grow: 1;
+
+  font-size: 1vw;
+
+  cursor: pointer;
 }
 
 .collapsed-input > input:focus {
@@ -59,4 +68,23 @@
 
   font-weight: bolder;
   text-transform: uppercase;
+  transition: scale 0.25s;
+}
+
+.button:hover {
+  cursor: pointer;
+  scale: 1.025;
+}
+
+.button:active {
+  scale: 1;
+}
+
+@media screen and (max-aspect-ratio: 1) {
+  label,
+  select,
+  input,
+  .button {
+    font-size: 3vw;
+  }
 }
