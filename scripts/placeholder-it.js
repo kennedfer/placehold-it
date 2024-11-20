@@ -71,3 +71,5 @@ const inputFontSize = document.getElementById("input-font-size");
 const inputExportType = document.getElementById("input-export-type");
 const inputQuality = document.getElementById("input-export-quality");
 const inputFileName = document.getElementById("input-export-name");
+
+document.querySelector(".config-panel").addEventListener("input", generatePlaceholder)

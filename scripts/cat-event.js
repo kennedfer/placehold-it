@@ -4,3 +4,5 @@ function scrollToCanvasSection() {
     behavior: "smooth"
   })
 }
+
+document.querySelector("#cat-button").addEventListener("click", scrollToCanvasSection);
