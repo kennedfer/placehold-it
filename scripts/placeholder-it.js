@@ -1,5 +1,30 @@
+function getPlaceholderText() {
+  const width = inputWidth.value;
+  const height = inputHeight.value;
+
+  return inputText.value || (width + " X " + height)
+}
+
+function savePlaceholder() {
+  const imageType = inputExportType.value;
+  const imageDataType = "image/" + imageType;
+  const imageQuality = (inputQuality.value || 90) / 100;
+  const imageName = inputFileName.value || ("placeholder-" + getPlaceholderText());
+
+  const imageData = canvas.toDataURL(imageDataType, imageQuality);
+
+  console.log(imageType);
+
+  let link = document.createElement('a');
+  link.setAttribute('download', imageName + "." + imageType);
+  link.setAttribute('href', imageData.replace(imageDataType, "image/octet-stream"));
+  link.click();
+
+  link = null;
+}
+
 function drawCanvas(width, height) {
-  const message = inputText.value || (width + " X " + height)
+  const message = getPlaceholderText();
   const fontSize = inputFontSize.value || width / 25;
 
   ctx.fillStyle = inputBackground.value;
@@ -43,3 +68,6 @@ const inputText = document.getElementById("input-text");
 const inputBackground = document.getElementById("input-background-color");
 const inputForeground = document.getElementById("input-foreground-color");
 const inputFontSize = document.getElementById("input-font-size");
+const inputExportType = document.getElementById("input-export-type");
+const inputQuality = document.getElementById("input-export-quality");
+const inputFileName = document.getElementById("input-export-name");

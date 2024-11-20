@@ -1,5 +1,6 @@
 :root {
   --primary-color: #1e293b;
+  --font-family: "Poppins", sans-serif;
 }
 
 body,
@@ -13,9 +14,13 @@ section {
 }
 
 h2 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family);
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2rem;
+
+  margin-top: 20px;
+
+  color: var(--primary-color);
 }
 
 .canvas-section {
