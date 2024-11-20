@@ -59,7 +59,13 @@
       <section class="hero-section">
         <h1>Placehold It</h1>
         <h3>Customize dimensions, colors and text - simple and fast.</h3>
-        <button id="cat-button" class="cat-button">Generate Placeholder</button>
+        <button
+          aria-label="Generate a placeholder"
+          id="cat-button"
+          class="cat-button"
+        >
+          Generate Placeholder
+        </button>
 
         <div class="bg-square-1"></div>
         <div class="bg-square-2"></div>
@@ -71,11 +77,11 @@
           <canvas id="placeholder-canvas" class="placeholder-canvas"></canvas>
         </div>
 
-        <div class="config-panel">
-          <h2>options</h2>
+        <div class="config-panel" oninput="generatePlaceholder()">
+          <h2>Options</h2>
           <div class="dimension-input-container">
             <div class="collapsed-input">
-              <label for="input-width">width</label>
+              <label for="input-width">Width</label>
               <input
                 id="input-width"
                 min="16"
@@ -85,7 +91,7 @@
             </div>
             <span>X</span>
             <div class="collapsed-input">
-              <label for="input-height">height</label>
+              <label for="input-height">Height</label>
               <input
                 id="input-height"
                 min="16"
@@ -95,32 +101,32 @@
             </div>
           </div>
           <div class="collapsed-input">
-            <label for="input-height">text</label>
+            <label for="input-text">Text</label>
             <input id="input-text" placeholder="My Placeholder" type="text" />
           </div>
           <div class="collapsed-input">
-            <label for="input-height">font size</label>
+            <label for="input-font-size">Font Size</label>
             <input id="input-font-size" placeholder="20" type="number" />
           </div>
           <div class="collapsed-input">
-            <label for="input-height">background</label>
+            <label for="input-background-color">Background</label>
             <input id="input-background-color" type="color" value="#ffffff" />
           </div>
           <div class="collapsed-input">
-            <label for="input-height">foreground</label>
+            <label for="input-foreground-color">Foreground</label>
             <input id="input-foreground-color" type="color" value="#1e293b" />
           </div>
-          <h2>export</h2>
+          <h2>Export</h2>
           <div class="collapsed-input">
-            <label for="input-height">export type</label>
-            <select id="input-export-type" type="color" value="#1e293b">
+            <label for="input-export-type">Export Type</label>
+            <select id="input-export-type">
               <option value="png">PNG</option>
               <option value="webp">WEBP</option>
               <option value="jpeg">JPEG</option>
             </select>
           </div>
           <div class="collapsed-input">
-            <label for="input-height">quality</label>
+            <label for="input-export-quality">Quality</label>
             <input
               id="input-export-quality"
               type="number"
@@ -130,15 +136,15 @@
             />
           </div>
           <div class="collapsed-input">
-            <label for="input-height">file name</label>
+            <label for="input-export-name">File Name</label>
             <input
               id="input-export-name"
               type="text"
               placeholder="my-placeholder"
             />
           </div>
-          <button onclick="savePlaceholder()" class="button">
-            save placeholder
+          <button id="save-placeholder-button" class="button">
+            Save Placeholder
           </button>
         </div>
       </section>
