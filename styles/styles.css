@@ -8,6 +8,13 @@ h2 {
   margin: 0;
 }
 
+main {
+  height: 100vh;
+  overflow-y: scroll;
+
+  scrollbar-width: thin;
+}
+
 section {
   height: 100vh;
   background-color: white;
@@ -58,6 +65,15 @@ canvas {
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  max-height: calc(100vh - 6vw);
+  overflow-y: scroll;
+
+  scrollbar-width: none;
+}
+
+.config-panel > * {
+  flex-shrink: 0;
 }
 
 @media screen and (max-aspect-ratio: 1) {
